@@ -1,27 +1,24 @@
 #include <stdio.h>
 
 int main() {
-    float voto, somma_voti = 0;
-    int numero_voti = 0;
+    float voto, SommaVoti = 0;
+    int NumeroVoti = 0;
 
-    // Ciclo per continuare a chiedere i voti fino all'inserimento di 0
+    // ciclo per continuare a chiedere i voti fino all'inserimento di 0
     do {
         printf("Inserisci un voto (0 per terminare): ");
         scanf("%f", &voto);
 
         if (voto != 0) {
-            somma_voti += voto;
-            numero_voti++;
+            SommaVoti += voto;
+            NumeroVoti++;
         }
     } while (voto != 0);
 
     // Calcolo della media se sono stati inseriti voti
-    if (numero_voti > 0) {
-        float media = somma_voti / numero_voti;
+    if (NumeroVoti > 0) {
+        float media = SommaVoti / NumeroVoti;
         printf("La media dei voti è: %.2f\n", media);
     } else {
         printf("Non sono stati inseriti voti\n");
     }
-
-    return 0;
-}
