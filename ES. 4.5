@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    
+    //dichiarazioni
+
+    int i, NumeroProdotti;
+    float totale=0,prezzo;
+
+    //aquisizione dati
+
+    printf("inserisci il numero dei prodotti : ");
+    scanf("%d",&NumeroProdotti);
+
+    //stampa
+
+    for (i = 1; i<=NumeroProdotti; i++) {
+        printf("inserisci il prezzo del prodotto numero %d : ", i);
+        scanf("%f", &prezzo);
+        totale += prezzo;
+    }
+
+    //visualizzazione dati
+
+    printf("%f\n",totale);
+}
